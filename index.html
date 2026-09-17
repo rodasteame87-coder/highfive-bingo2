@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#111827">
+  <title>Highfive Bingo</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://telegram.org/js/telegram-web-app.js?63"></script>
+</head>
+<body>
+  <main class="app">
+    <header class="topbar">
+      <div>
+        <div class="brand">🎱 Highfive Bingo</div>
+        <div id="playerName" class="subtle">Connecting to Telegram…</div>
+      </div>
+      <div id="statusPill" class="pill">WAITING</div>
+    </header>
+
+    <section class="hero">
+      <div>
+        <div class="eyebrow">LIVE BINGO</div>
+        <h1 id="gameTitle">Waiting for game</h1>
+        <p id="gameMessage">Join the game and your card will be generated automatically.</p>
+      </div>
+      <div class="called-ball" aria-live="polite">
+        <span id="calledLetter">–</span>
+        <strong id="calledNumber">–</strong>
+      </div>
+    </section>
+
+    <section class="panel">
+      <div class="panel-head">
+        <h2>Your card</h2>
+        <span id="cardStatus" class="subtle">Not joined</span>
+      </div>
+
+      <div class="bingo-head" aria-hidden="true">
+        <span>B</span><span>I</span><span>N</span><span>G</span><span>O</span>
+      </div>
+      <div id="card" class="card" aria-label="Bingo card"></div>
+
+      <div class="legend">
+        <span><i class="dot marked"></i> Called</span>
+        <span><i class="dot free"></i> Free</span>
+      </div>
+    </section>
+
+    <section class="numbers-panel panel">
+      <div class="panel-head">
+        <h2>Numbers called</h2>
+        <span id="count">0/75</span>
+      </div>
+      <div id="numbers" class="numbers"></div>
+    </section>
+
+    <section class="actions">
+      <button id="joinBtn" class="primary" type="button">Join game</button>
+      <button id="bingoBtn" class="secondary" type="button" disabled>🎉 Claim BINGO</button>
+    </section>
+
+    <div id="notice" class="notice" role="status" aria-live="polite"></div>
+    <div class="footer">Highfive Bingo • Telegram Mini App</div>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>
