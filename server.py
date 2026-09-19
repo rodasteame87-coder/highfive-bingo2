@@ -5,9 +5,9 @@ Render Start Command:
     gunicorn server:app
 
 Required environment variables:
-    BOT_TOKEN       = your Telegram bot token
+    BOT_TOKEN       = 8603223372:AAErofcm2DUk4ZKWLrTul90aiG_rDSin__Y
     ADMIN_KEY       = random secret
-    ADMIN_USER_ID   = your Telegram numeric user ID
+    ADMIN_USER_ID   = 
 
 Optional:
     APP_URL         = https://highfive-bingo2.onrender.com
